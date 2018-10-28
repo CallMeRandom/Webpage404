@@ -1,1 +1,109 @@
-<h1>Hello World</h1>
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Random's Webpage</title>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+    <!-- The Script For The Current Time -->
+    <script>
+function startTime() {
+    var today = new Date();
+    var h = today.getHours();
+    var m = today.getMinutes();
+    var s = today.getSeconds();
+    m = checkTime(m);
+    s = checkTime(s);
+    document.getElementById('txt').innerHTML =
+    h + ":" + m + ":" + s;
+    var t = setTimeout(startTime, 500);
+}
+function checkTime(i) {
+    if (i < 10) {i = "0" + i};
+    return i;
+}
+</script>
+  </head>
+  <style>
+    #Main-Header {
+  text-align: center;
+  font-family: serif;
+  color: #B9B9B9;
+  width: 40%;
+  float: left;
+}
+
+#Main-Header-Description {
+  text-align: center;
+  font-family: sans-serif;
+  color: rgb(197, 197, 197);
+  width: 40%;
+  font-weight: bold;
+}
+
+#Side-Main-Header {
+  float: right;
+  text-align: center;
+  width: 50%;
+  color: #B9B9B9
+}
+
+#txt {
+  text-align: center;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  margin-right: 200px;
+  margin-left: 200px;
+  border: dotted;
+  background-color: rgb(245, 245, 245);
+  color: #B9B9B9;
+  font-weight: bold;
+  float: none;
+}
+
+#List-One {
+  background-color: rgb(245, 245, 245);
+  border: dotted;
+  width: 50%;
+  height: 100px;
+  color: #B9B9B9;
+  position: fixed;
+  overflow: auto;
+  padding: 10px;
+  margin-top: 10px
+}
+  </style>
+  <body onload="startTime()">
+    <script src="script.js"></script>
+  <div id="txt"></div>
+  <h1 id="Side-Main-Header">What I'm Thinking About</h1>
+  <h1 id="Main-Header">Random's Webpage</h1>
+  <h2 id="Main-Header-Description">Info on me and what I do</h2>
+  <div id="List-One">
+    <ul>
+      <li>Currently Learning How To Code And Make This Webpage A Little Bit Better</li>
+      <li>I Play Games On PS4 My Gamertag Is 'RandomKid1230'</li>
+      <li>For Serious Messages <strong>only</strong> Message Me @ CallMeRandom@yahoo.com</li>
+      <li>I Can Teach You How To <em>Code</em> For <em>Cheap</em></li>
+      <li>Games I Play:<br>
+        <ol>
+          <li>Call Of Duty: Black Ops 4</li>
+          <li>Call OF Duty: Black Ops 3</li>
+          <li>Fortnite: Battle Royal</li>
+          <li>Fortnite: Save The World</li>
+          <li>H1Z1: King Of The Kill</li>
+          <li>Red Dead Redemption 2</li>
+          <li>Grand Theft Auto V</li>
+          <li>And <em>So</em> Much More :D</li>
+        </ol>
+      </li>
+      <li>I Will Teach You How To Start Making Your First Steps Into The World Of Coding For Free Afterwords I Will Offer Them For A <em>Super</em> Cheap Price</li>
+    </ul>
+    <p></p>
+  </div>
+  <div>
+
+  </div>
+
+  </body>
+</html>
